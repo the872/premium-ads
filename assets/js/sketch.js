@@ -16,8 +16,8 @@ var cur_rms = 0
 var mfcc_history = []
 
 
-function 
-/* get new audio 
+function
+/* get new audio
 context object */
 createAudioCtx(){
     let AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -27,7 +27,7 @@ createAudioCtx(){
 
 function
 /* create microphone
-audio input source from 
+audio input source from
 audio context */
 createMicSrcFrom(audioCtx){
     /* get microphone access */
@@ -69,7 +69,7 @@ onMicDataCall(features, callback){
             reject(err)
         })
     })
-    
+
 }
 
 
@@ -78,7 +78,7 @@ function setup() {
     createCanvas(BOX_WIDTH * MFCC_HISTORY_MAX_LENGTH, BOX_HEIGHT * cur_mfcc.length)
     background(0, 0, 0)
 
-    // create meyda analyzer 
+    // create meyda analyzer
     // and connect to mic source
     onMicDataCall([FEATURE_NAME_MFCC, FEATURE_NAME_RMS], show)
     .then((meydaAnalyzer) => {
@@ -106,7 +106,7 @@ function draw () {
         mfcc_history.push ( cur_mfcc )
         silence = false
     } else {
-        // push an empty mfcc value 
+        // push an empty mfcc value
         // to signify end of utterance
         if ( silence == false ) {
             mfcc_history.push(DEFAULT_MFCC_VALUE)
@@ -114,10 +114,10 @@ function draw () {
         }
     }
 
-    // only store the last n 
+    // only store the last n
     if(mfcc_history.length > MFCC_HISTORY_MAX_LENGTH)
         mfcc_history.splice(0,1)
-    
+
     plot(mfcc_history)
 }
 
@@ -128,12 +128,12 @@ let plot = (data) => {
 
             // setting color
             if ( data [i] [j] >= 0 )
-                fill ( 111, 199, 205, color_strength )
+                fill ( 139, 199, 205, color_strength )
             else
                 fill( 91, 79, - color_strength )
-            
+
             noStroke();
-            
+
             // drawing the rectangle
 	    arc(i * BOX_WIDTH, j * BOX_HEIGHT, BOX_WIDTH, BOX_HEIGHT, 2 * Math.PI, false);
 

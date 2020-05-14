@@ -5,6 +5,7 @@ img {
     max-width: 800px;
 }
 body{
+    overflow: hidden;
     background:#fff;
     color:black;
     font-size: 30px;
@@ -12,6 +13,7 @@ body{
     margin: 0 !important;
 }
 canvas {
+    z-index: 10;
     height: 100vh !important;
     width: 100vw !important;
     transform-style: preserve-3d;
