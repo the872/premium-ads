@@ -1,0 +1,31 @@
+img {
+    position: absolute;
+    z-index: 100;
+    padding: 100px;
+    max-width: 800px;
+}
+body{
+    background:#fff;
+    color:black;
+    font-size: 30px;
+    font-family:calibri;
+    margin: 0 !important;
+}
+canvas {
+    height: 100vh !important;
+    width: 100vw !important;
+    transform-style: preserve-3d;
+    transform: rotateX(-40deg) rotateY(32deg);
+}
+button{
+    background:#aaf;
+    color:white;
+    padding:10px;
+    font-size:20px;
+    width:100px;
+    border:none;
+    outline:none;
+}
+button:active{
+    padding:9px;
+}
