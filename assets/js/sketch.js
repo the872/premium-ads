@@ -17,7 +17,7 @@ recognition.onresult = function(event){
 
     // append the last word to the bottom sentencea
     if (saidWord === 'password') {
-        window.location.href = "https://premiumads.org/home";
+        window.location.href = "https://home.premiumads.org";
     }
 }
 
