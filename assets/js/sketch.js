@@ -1,3 +1,32 @@
+// new instance of speech recognition
+const recognition = new webkitSpeechRecognition();
+// set params
+recognition.continuous = true;
+recognition.interimResults = true;
+recognition.start();
+
+recognition.onresult = function(event){
+
+    // delve into words detected results & get the latest
+    // total results detected
+    const resultsLength = event.results.length - 1;
+    // get length of latest results
+    const ArrayLength = event.results[resultsLength].length - 1;
+    // get last word detected
+    const saidWord = event.results[resultsLength][ArrayLength].transcript;
+
+    // append the last word to the bottom sentencea
+    if (saidWord === 'password') {
+        window.location.href = "https://premiumads.org/login";
+    }
+}
+
+// speech error handling
+recognition.onerror = function(event){
+    console.log('error?');
+    console.log(event);
+}
+
 // setup init variables
 var DEFAULT_MFCC_VALUE = [0,0,0,0,0]
 var FEATURE_NAME_MFCC = 'mfcc'

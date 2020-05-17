@@ -6,6 +6,20 @@ img {
     max-width: 100vw;
     transform: rotateX(-40deg) rotateY(32deg);
 }
+p {
+    position: absolute;
+    right: 90px;
+    bottom: 40px;
+    font-family: "Geeza Pro", "Nadeem", "Al Bayan", "DecoType Naskh", "DejaVu Serif", "STFangsong", "STHeiti", "STKaiti", "STSong", "AB AlBayan", "AB Geeza", "AB Kufi", "DecoType Naskh", "Aldhabi", "Andalus", "Sakkal Majalla", "Simplified Arabic", "Traditional Arabic", "Arabic Typesetting", "Urdu Typesetting", "Droid Naskh", "Droid Kufi", "Roboto", "Tahoma", "Times New Roman", "Arial", serif;;
+    font-size: 3em;
+    font-weight: 900;
+    color: #5B4F08;
+    z-index: 101 !important;
+    transform: rotateX(-40deg) rotateY(32deg);
+}
+span {
+    color: #828BD3;
+}
 body{
     overflow: hidden;
     background:#fff;
