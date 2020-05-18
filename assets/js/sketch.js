@@ -1,10 +1,3 @@
-window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
-}
-
 // new instance of speech recognition
 const recognition = new webkitSpeechRecognition();
 // set params
@@ -174,5 +167,12 @@ let plot = (data) => {
 	    arc(i * BOX_WIDTH, j * BOX_HEIGHT, BOX_WIDTH, BOX_HEIGHT, 2 * Math.PI, false);
 
         }
+    }
+}
+
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
     }
 }
